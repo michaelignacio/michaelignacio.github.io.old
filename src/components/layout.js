@@ -14,15 +14,14 @@ class Layout extends React.Component {
         <header className="header"  >
           { location.pathname === rootPath ||
             location.pathname === '/about' ||
-            location.pathname === '/projects'
-           ? '' : 
+            location.pathname === '/portfolio' ||
+            location.pathname === '/playground'
+           ? '' :
             <p className="mb-1">
             <Link to="/" className="view-all" >
               View all posts
             </Link></p> }
-          { (location.pathname === rootPath ||
-             location.pathname === '/about' ||
-             location.pathname === '/projects' ) && <Bio /> }
+          { <Bio /> }
         </header>
         <div>
           <main className="main">{children}</main>

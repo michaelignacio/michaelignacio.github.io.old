@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import projects from "../../content/assets/projects.json"
 
 class Projects extends React.Component {
   render() {

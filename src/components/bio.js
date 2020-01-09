@@ -14,8 +14,9 @@ import "./styles/bio.scss"
 
 const links = [
   { href: '/', label: 'Posts' },
-  { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
+  { href: '/about', label: 'Personal' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/playground', label: 'Playground' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
