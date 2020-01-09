@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Michael Ignacio]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsby-starter-blog-demo.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 09 Jan 2020 08:23:37 GMT</lastBuildDate><item><title><![CDATA[Your Top Songs in Spotify]]></title><description><![CDATA[Being a daily user of Spotify and a huge proponent of analytics, I always look forward to my personal Spotify generated annual report which…]]></description><link>https://gatsby-starter-blog-demo.netlify.com/top-songs-spotify-react/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com/top-songs-spotify-react/</guid><pubDate>Wed, 31 Jul 2019 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Being a daily user of Spotify and a huge proponent of analytics, I always look forward to my personal Spotify generated annual report which tells me what songs I have played the most, the artists that I keep coming back to, genres that I frequent and other statistics.&lt;/p&gt;
+&lt;p&gt;Early in July, I already wanted to know what my top tracks are and I couldn’t wait for that end of the year official Spotify report. So as a developer, I took matters into my own hands and decided to create a web app that does that so other people can use it too.&lt;/p&gt;
+&lt;h3&gt;Why React?&lt;/h3&gt;
+&lt;p&gt;I wanted to use a modern front-end library to display the data fetched from Spotify in an aesthetic and user-friendly way.&lt;/p&gt;
+&lt;h3&gt;Why Spotify (and not Apple Music, Tidal, etc)?&lt;/h3&gt;
+&lt;p&gt;I’ve been doing some research in the past about using the Spotify API so naturally it’s my first choice.  I also think that there are more Spotify users because it’s device-agnostic, unlike Apple Music. And as for Tidal, only Jay-Z uses that service, so…&lt;/p&gt;
+&lt;h3&gt;The Steps&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Connect to Spotify &lt;code class=&quot;language-text&quot;&gt;(Spotify Auth)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fetch user data from Spotify’s REST API &lt;code class=&quot;language-text&quot;&gt;(axios)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Display the data on the frontend &lt;code class=&quot;language-text&quot;&gt;(create-react-app)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;Optional&lt;/em&gt;: Add feature that saves the user’s top songs in a specific playlist. This playlist should be updated accordingly when the user uses the web app.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Takeaways&lt;/strong&gt;: For styling, I tried using SASS and CSS in JS but eventually settled with CSS Modules, which I think is personally the best way to handle CSS in React.&lt;/p&gt;
+&lt;p&gt;Here you can access &lt;a href=&quot;http://toptrax.herokuapp.com&quot; target=&quot;_blank&quot;&gt;TopTrax&lt;/a&gt;, or view its &lt;a href=&quot;http://github.com/michaelignacio/toptrax&quot; target=&quot;_blank&quot;&gt;source code on Github&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Modern Wordpress Workflow]]></title><description><![CDATA[Today I want to explain my current Wordpress workflow in detail. I’m always on
+the lookout on how to improve my development tools so there’s…]]></description><link>https://gatsby-starter-blog-demo.netlify.com/modern-wordpress-workflow-2019/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com/modern-wordpress-workflow-2019/</guid><pubDate>Tue, 23 Jul 2019 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Today I want to explain my current Wordpress workflow in detail. I’m always on
+the lookout on how to improve my development tools so there’s a chance that
+this post might be inaccurate, but I’ll try to keep this post updated.&lt;/p&gt;
+&lt;h3&gt;Local Wordpress Environment&lt;/h3&gt;
+&lt;p&gt;I tried using &lt;a href=&quot;https://varyingvagrantvagrants.org/&quot; target=&quot;_blank&quot;&gt;VVV
+&lt;/a&gt; but found it too large-scale for my development purposes. Starting up Vagrant
+takes too much time especially if you’re only booting up one Wordpress install.
+But I think it’s perfect if you have several Wordpress installs in one Vagrant
+configuration.&lt;/p&gt;
+&lt;p&gt;I found &lt;a href=&quot;https://github.com/10up/wp-local-docker-v2&quot; target=&quot;_blank&quot;&gt;
+WP Local Docker&lt;/a&gt; to be the smaller yet as efficient brother of VVV, since
+starting up a Docker container using the &lt;code class=&quot;language-text&quot;&gt;10updocker start&lt;/code&gt; command is way
+faster than &lt;code class=&quot;language-text&quot;&gt;vagrant up&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For some reason one of my &lt;code class=&quot;language-text&quot;&gt;10updocker&lt;/code&gt; installs suddenly slowed down, so I had
+no choice but to find an alternative for the meantime. This is where I found
+&lt;a href=&quot;https://localbyflywheel.com/&quot; target=&quot;_blank&quot;&gt;Local by Flywheel&lt;/a&gt; to
+be a worthy solution as it’s really fast and has a
+friendly graphical UI - which is a plus for them (even though I’m more inclined
+towards command-line interfaces).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Fun fact:&lt;/em&gt; &lt;a href=&quot;https://varyingvagrantvagrants.org/&quot; target=&quot;_blank&quot;&gt;VVV&lt;/a&gt;
+&lt;em&gt;and&lt;/em&gt; &lt;a href=&quot;https://github.com/10up/wp-local-docker-v2&quot; target=&quot;_blank&quot;&gt;
+WP Local Docker&lt;/a&gt; &lt;em&gt;are projects that both started in the
+company&lt;/em&gt; &lt;a href=&quot;https://10up.com/&quot; target=&quot;_blank&quot;&gt;10up&lt;/a&gt;, &lt;em&gt;so kudos to you
+guys!&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;NPM packages&lt;/h3&gt;
+&lt;p&gt;Recently most of what I do requires building on our in-house Wordpress theme and
+plugins, and since our SASS files are handled by
+&lt;a href=&quot;https://github.com/ConnectThink/WP-SCSS&quot; target=&quot;_blank&quot;&gt;WP-SCSS&lt;/a&gt;
+for easier client customizations, &lt;a href=&quot;https://www.browsersync.io/&quot;
+target=&quot;_blank&quot;&gt; Browsersync&lt;/a&gt; is the package that I mostly use in Wordpress
+development.&lt;/p&gt;
+&lt;h3&gt;Better option than page builders&lt;/h3&gt;
+&lt;p&gt;We’ve stopped using page builders because a) major strides are being done in
+&lt;a href=&quot;https://wordpress.org/gutenberg/&quot; target=&quot;_blank&quot;&gt;Gutenberg&lt;/a&gt;,
+removing the need for third-party page builders and b) most page builders are
+bloated in nature.&lt;/p&gt;
+&lt;p&gt;We would’ve opted for Gutenberg if not for how it currently handles row and
+column layouts, which is a limiting factor for us in delivering varying layouts
+to our Wordpress builds. But I’m sure they will address this pretty soon, so
+until then…&lt;/p&gt;
+&lt;p&gt;We’ve chosen &lt;a href=&quot;https://www.advancedcustomfields.com/&quot; target=&quot;_blank&quot;&gt;
+Advanced Custom Fields&lt;/a&gt; because of its sheer power to customize
+Wordpress to your needs. It also allowed us to create re-usable templates that
+we can build on and track with version control - something that doesn’t feel
+natural with page builders like Visual Composer.&lt;/p&gt;
+&lt;h3&gt;Syncing databases&lt;/h3&gt;
+&lt;p&gt;This has always been the issue in having a modern Wordpress workflow - how
+do you handle database changes? Our solution for this is
+&lt;a href=&quot;https://deliciousbrains.com/wp-migrate-db-pro/&quot; target=&quot;_blank&quot;&gt;
+WP Migrate DB Pro&lt;/a&gt;. It allows us to sync changes from local to production,
+and vice versa. There’s also a free alternative - &lt;a target=&quot;_blank&quot; href=&quot;
+https://github.com/wp-sync-db/wp-sync-db&quot;&gt;WP Sync DB&lt;/a&gt; - and there’s something
+weird going on between them as this free and paid solutions look a lot alike,
+but I’ll let you figure that out yourself.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;I’m pretty sure there are other better workflows out there as far as Wordpress
+is concerned, but for my usage, this workflow allows me to focus on translating
+wireframes into actual code, without my tooling or configurations getting in my
+way.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Fund Management Platform]]></title><description><![CDATA[Affluence is a fund management company focused on delivering superior long-term investment performance
+from the best Australian fund…]]></description><link>https://gatsby-starter-blog-demo.netlify.com/fund-management-platform/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com/fund-management-platform/</guid><pubDate>Sun, 14 Jul 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c7bffffa596d0660a00dea9a485086dd/035f0/affluence.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.5095168374817%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAbC72QJlAT//xAAaEAACAgMAAAAAAAAAAAAAAAACAwABEBET/9oACAEBAAEFAuYRtLEFr2MvH//EABYRAAMAAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPwGIiP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABoQAQACAwEAAAAAAAAAAAAAAAEAIQIRIDL/2gAIAQEABj8C8EaxGbQvj//EABwQAQABBAMAAAAAAAAAAAAAAAERABAhMVFhgf/aAAgBAQABPyF0SB1T7EE5KLnhgtv5b//aAAwDAQACAAMAAAAQWB//xAAVEQEBAAAAAAAAAAAAAAAAAAAAYf/aAAgBAwEBPxCST//EABYRAAMAAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPxCIiP/EABwQAAIBBQEAAAAAAAAAAAAAAAERABAhMUFhcf/aAAgBAQABPxA5LBDiBbds1DZW4FgiSBCC7TL6gn//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Affluence&quot;
+        title=&quot;Affluence&quot;
+        src=&quot;/static/c7bffffa596d0660a00dea9a485086dd/88218/affluence.jpg&quot;
+        srcset=&quot;/static/c7bffffa596d0660a00dea9a485086dd/7237a/affluence.jpg 148w,
+/static/c7bffffa596d0660a00dea9a485086dd/0cfdf/affluence.jpg 295w,
+/static/c7bffffa596d0660a00dea9a485086dd/88218/affluence.jpg 590w,
+/static/c7bffffa596d0660a00dea9a485086dd/77d57/affluence.jpg 885w,
+/static/c7bffffa596d0660a00dea9a485086dd/5a917/affluence.jpg 1180w,
+/static/c7bffffa596d0660a00dea9a485086dd/035f0/affluence.jpg 1366w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Affluence is a fund management company focused on delivering superior long-term investment performance
+from the best Australian fund managers. In this post I am going to review how we created such a platform for them.&lt;/p&gt;
+&lt;h3&gt;Wordpress as CMS&lt;/h3&gt;
+&lt;p&gt;We initially created a Wordpress website for them that displays their about information, blog posts, and contact information, and provides an interface so that the client can easily update its content. Down the line they wanted to integrate a membership system to the website as well. This website also captures leads from opt-in forms via &lt;a href=&quot;https://www.gravityforms.com&quot;&gt;GravityForms&lt;/a&gt;, and those e-mails go to…&lt;/p&gt;
+&lt;h3&gt;Infusionsoft as CRM&lt;/h3&gt;
+&lt;p&gt;Affluence has been using &lt;a href=&quot;https://keap.com/infusionsoft&quot; target=&quot;_blank&quot;&gt;Infusionsoft&lt;/a&gt; (now called &lt;em&gt;Infusionsoft by Keap&lt;/em&gt;) as their CRM software. Infusionsoft has been around for quite a while and has always been a top choice when it comes to CRM. Now the only thing that’s left is how to bridge the website or CMS (Wordpress) and customer information (or site members) together, and that’s how we came upon…&lt;/p&gt;
+&lt;h3&gt;Memberium as membership plugin&lt;/h3&gt;
+&lt;p&gt;We chose &lt;a target=&quot;_blank&quot; href=&quot;http://memberium.com/&quot;&gt;Memberium&lt;/a&gt; as it seamlessly integrates with &lt;a href=&quot;https://keap.com/infusionsoft&quot; target=&quot;_blank&quot;&gt;Infusionsoft&lt;/a&gt;, the marketing platform that Affluence was already using prior to their website. Memberium is the first thing that comes up when you look for Wordpress-Infusionsoft membership solutions. Through this Wordpress plugin, we were able to sync the data from Wordpress to Infusionsoft and vice versa, which enabled their customers to login with their existing Infusionsoft data onto the Affluence website.&lt;/p&gt;
+&lt;h3&gt;The Platform&lt;/h3&gt;
+&lt;p&gt;The platform works well and serves as the user’s dashboard and allows them to view how their investment portfolio is performing. This fetches data from Infusionsoft and shows different figures like amount invested, date of transaction, etc. It also allows the user to update specific data related to their profile and investment - and any changes made on the dashboard is synced to Infusionsoft.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[pathPrefix in Gatsby not working?]]></title><description><![CDATA[Thought I’d save someone else’s time who’s experiencing this bug: Inside the  file, the  parameter goes outside the  parameter, not inside…]]></description><link>https://gatsby-starter-blog-demo.netlify.com/pathprefix-gatsbyjs-not-working/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com/pathprefix-gatsbyjs-not-working/</guid><pubDate>Tue, 02 Jul 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;Thought I’d save someone else’s time who’s experiencing this bug:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;module.exports = {
+  pathPrefix: `/your-path-prefix-here`,
+  siteMetadata: {
+    title: ...
+  }
+  ...
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Inside the &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; file, the &lt;code class=&quot;language-text&quot;&gt;pathPrefix&lt;/code&gt; parameter goes outside the &lt;code class=&quot;language-text&quot;&gt;siteMetadata&lt;/code&gt; parameter, not inside. ;)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Creating a blog with Gatsby]]></title><description><![CDATA[I was trying to find the best solution for a blog, and I thought I’d create mine in Gatsby. And hey - obligatory Hello World! You could have…]]></description><link>https://gatsby-starter-blog-demo.netlify.com/creating-react-blog-gatsby/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com/creating-react-blog-gatsby/</guid><pubDate>Mon, 01 Jul 2019 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;I was trying to find the best solution for a blog, and I thought I’d create mine in Gatsby. And hey - obligatory &lt;a href=&quot;https://en.wikipedia.org/wiki/%22Hello,_World!%22_program&quot; target=&quot;_blank&quot;&gt;Hello World&lt;/a&gt;!&lt;/p&gt;
+&lt;h3&gt;You could have just whipped up a Wordpress blog&lt;/h3&gt;
+&lt;p&gt;A few years ago the answer might have been a Wordpress blog (and for a lot of use cases, I’m pretty sure it still is). When Node.js came out, the answer might have been Ghost. And I’m sure there are plenty other options - even Medium (for some reason I keep getting error 500 on Medium, so that’s off my list).&lt;/p&gt;
+&lt;p&gt;React is everywhere these days, so it’s good to create a blog in GatsbyJS, a “blazing fast” site generator for React.&lt;/p&gt;
+&lt;p&gt;The speed is pretty evident once you’ve tried navigating on a website written in Gatsby (like this blog).&lt;/p&gt;
+&lt;h3&gt;Requirements&lt;/h3&gt;
+&lt;p&gt;I used &lt;a href=&quot;https://github.com/gatsbyjs/gatsby-starter-blog&quot; target=&quot;_blank&quot;&gt;this starter template&lt;/a&gt; because there’s no point reinventing the wheel.&lt;/p&gt;
+&lt;p&gt;The installation process is simple - just make sure you have &lt;code class=&quot;language-text&quot;&gt;node&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt;, and &lt;code class=&quot;language-text&quot;&gt;gatsby&lt;/code&gt; installed - then you can clone the starter template above (you’ll need to have &lt;code class=&quot;language-text&quot;&gt;git&lt;/code&gt; installed for this).&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;I’m pretty impressed with the end product - it really shows how having a static site really gives you a blazing fast website.&lt;/p&gt;
+&lt;p&gt;I’ll be filling this blog with entries detailing my development process, so stay tuned!&lt;/p&gt;</content:encoded></item></channel></rss>
